@@ -5,8 +5,8 @@
   |============================
 */
 /* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./footer.css');
-@import url('./image-search.css');
+@import url("./reset.css");
+@import url("./base.css");
+@import url("./container.css");
+@import url("./footer.css");
+@import url("./image-search.css");

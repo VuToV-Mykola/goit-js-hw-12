@@ -10,7 +10,7 @@
     <!-- Українською: Забезпечує сумісність з Internet Explorer / English: Ensures compatibility with Internet Explorer -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Українською: Налаштування адаптивного дизайну / English: Responsive design settings -->
-    <title>Image Search — GoIT JS HW-11</title>
+    <title>Image Search — GoIT JS HW-12</title>
     <!-- Українською: Заголовок сторінки (вкладка браузера) / English: Page title (browser tab) -->
     <!--!!! STYLES !!!-->
     <link rel="stylesheet" href="./css/styles.css" />
@@ -21,7 +21,7 @@
     <!-- Українською: Основний контейнер сторінки / English: Main page container -->
     <!--!!! MAIN !!!-->
     <main class="page-main">
-      <!-- Українською: Основний вміст сторінки (форма пошуку, лоадер, галерея) / English: Main content (search form, loader, gallery) -->
+      <!-- Українською: Основний вміст сторінки (форма пошуку, галерея, Load more, лоадер) / English: Main content (search form, gallery, Load more, loader) -->
       <div class="container container--gallery">
         <!-- Українською: Контейнер для обмеження ширини контенту / English: Container for content width limitation -->
         <h1 class="main-title visually-hidden">Image Search</h1>
@@ -37,6 +37,10 @@
           </label>
           <button type="submit">Search</button>
         </form>
+        <ul class="gallery" aria-label="Gallery of search results"></ul>
+        <!-- Українською: Контейнер галереї результатів пошуку (заповнюється через JavaScript) / English: Gallery container (populated via JavaScript) -->
+        <button type="button" class="btn-load-more is-hidden">Load more</button>
+        <!-- Українською: Кнопка пагінації (прихована за замовчуванням) / English: Pagination button (hidden by default) -->
         <div class="loader-wrap is-hidden" aria-live="polite">
           <!-- Українською: Індикатор завантаження (прихований за замовчуванням) / English: Loading indicator (hidden by default) -->
           <div class="loader-inner ball-spin-fade-loader">
@@ -50,8 +54,10 @@
             <div></div>
           </div>
         </div>
-        <ul class="gallery" aria-label="Gallery of search results"></ul>
-        <!-- Українською: Контейнер галереї результатів пошуку (заповнюється через JavaScript) / English: Gallery container (populated via JavaScript) -->
+        <p class="end-message is-hidden" aria-live="polite">
+          We're sorry, but you've reached the end of search results.
+        </p>
+        <!-- Українською: Повідомлення про кінець колекції (приховане за замовчуванням) / English: End-of-collection message (hidden by default) -->
       </div>
     </main>
     <!--!!! FOOTER !!!-->
@@ -72,6 +78,6 @@
     </footer>
     <!--!!! SCRIPT !!!-->
     <script type="module" src="./main.js"></script>
-    <!-- Українською: Підключення JavaScript модуля для пошуку зображень / English: JavaScript module for image search functionality -->
+    <!-- Українською: Підключення JavaScript модуля для пошуку зображень та пагінації / English: JavaScript module for image search and pagination -->
   </body>
 </html>
