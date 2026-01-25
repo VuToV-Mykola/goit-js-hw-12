@@ -1,0 +1,77 @@
+<!doctype html>
+<!-- Українською: Декларація типу документу HTML5 / English: HTML5 document type declaration -->
+<html lang="en">
+  <!-- Українською: Вказує мову сторінки (англійська) / English: Specifies page language (English) -->
+  <!--!!! HEAD !!!-->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Українською: Кодування символів (UTF-8 підтримує всі мови) / English: Character encoding (UTF-8 supports all languages) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Українською: Забезпечує сумісність з Internet Explorer / English: Ensures compatibility with Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Українською: Налаштування адаптивного дизайну / English: Responsive design settings -->
+    <title>Image Search — GoIT JS HW-11</title>
+    <!-- Українською: Заголовок сторінки (вкладка браузера) / English: Page title (browser tab) -->
+    <!--!!! STYLES !!!-->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Українською: Підключення CSS стилів / English: CSS stylesheet link -->
+  </head>
+  <!--!!! BODY !!!-->
+  <body class="page page-gallery">
+    <!-- Українською: Основний контейнер сторінки / English: Main page container -->
+    <!--!!! MAIN !!!-->
+    <main class="page-main">
+      <!-- Українською: Основний вміст сторінки (форма пошуку, лоадер, галерея) / English: Main content (search form, loader, gallery) -->
+      <div class="container container--gallery">
+        <!-- Українською: Контейнер для обмеження ширини контенту / English: Container for content width limitation -->
+        <h1 class="main-title visually-hidden">Image Search</h1>
+        <!-- Українською: Семантичний заголовок (прихований для доступності) / English: Semantic heading (visually hidden for a11y) -->
+        <form class="form">
+          <!-- Українською: Форма пошуку зображень за ключовим словом / English: Image search form by keyword -->
+          <label>
+            <input
+              type="text"
+              name="search-text"
+              placeholder="Search images..."
+              required />
+          </label>
+          <button type="submit">Search</button>
+        </form>
+        <div class="loader-wrap is-hidden" aria-live="polite">
+          <!-- Українською: Індикатор завантаження (прихований за замовчуванням) / English: Loading indicator (hidden by default) -->
+          <div class="loader-inner ball-spin-fade-loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <ul class="gallery" aria-label="Gallery of search results"></ul>
+        <!-- Українською: Контейнер галереї результатів пошуку (заповнюється через JavaScript) / English: Gallery container (populated via JavaScript) -->
+      </div>
+    </main>
+    <!--!!! FOOTER !!!-->
+    <footer class="page-footer">
+      <!-- Українською: Нижня частина сторінки (копірайт, посилання) / English: Bottom section (copyright, links) -->
+      <div class="container">
+        <p class="footer-desc">
+          Made with ✨ by
+          <a
+            class="footer-link"
+            href="https://goit.global/ua/"
+            target="_blank"
+            rel="noopener noreferrer">
+            GoIT team
+          </a>
+        </p>
+      </div>
+    </footer>
+    <!--!!! SCRIPT !!!-->
+    <script type="module" src="./main.js"></script>
+    <!-- Українською: Підключення JavaScript модуля для пошуку зображень / English: JavaScript module for image search functionality -->
+  </body>
+</html>
