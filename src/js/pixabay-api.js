@@ -18,7 +18,7 @@ export async function getImagesByQuery(query, page = 1) {
     q: String(query).trim(),
     image_type: "photo",
     orientation: "horizontal",
-    safesearch: "true",
+    safesearch: true,
     page: Number(page) || 1,
     per_page: 15
   }
